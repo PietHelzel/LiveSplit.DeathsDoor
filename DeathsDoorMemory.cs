@@ -234,12 +234,14 @@ namespace LiveSplit.DeathsDoor {
             const float width = 6.1308f;
             const float z = 789.7526f;
             const float depth = 43.6074f;
+            const float y = 304f;
 
             const float pSize = 1f;
 
             return Scene.New.Equals("lvlConnect_Fortress_Mountaintops", StringComparison.Ordinal)
                 && PlayerPosition.New.x - pSize < x + width && PlayerPosition.New.x + pSize > x - width
-                && PlayerPosition.New.z - pSize < z + depth && PlayerPosition.New.z + pSize > z - depth;
+                && PlayerPosition.New.z - pSize < z + depth && PlayerPosition.New.z + pSize > z - depth
+                && PlayerPosition.New.y - pSize < y;
         }
         
         public bool LoadingTitleScreen() {
